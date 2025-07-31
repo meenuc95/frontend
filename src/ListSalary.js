@@ -9,7 +9,9 @@ class ListSalary extends React.Component {
 	}
 
 	loadData() {
-		fetch('/salary/search/all')
+		const salaryAPIDomain = process.env.REACT_APP_SALARY_API_DOMAIN || 'http://54.169.120.250:8081/api/v1';
+		const endpoint = `${salaryAPIDomain}/salary/search/all`;
+		fetch(endpoint)
 			.then(response => response.json())
 			.then(data => {
 				this.setState({data: data })

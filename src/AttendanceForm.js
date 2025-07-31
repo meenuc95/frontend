@@ -58,8 +58,10 @@ const FormikApp = withFormik({
     return { username, password }
   },
   handleSubmit(values, { props, resetForm, setErrors, setSubmitting }) {
+    const attendanceAPIDomain = process.env.REACT_APP_ATTENDANCE_API_DOMAIN || 'http://54.169.120.250:8081/api/v1';
+    const endpoint = `${attendanceAPIDomain}/attendance/create`;
     console.log(JSON.stringify(values))
-    fetch('/attendance/create', {
+    fetch(endpoint, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {

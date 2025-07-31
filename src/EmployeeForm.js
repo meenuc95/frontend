@@ -137,7 +137,9 @@ const FormikApp = withFormik({
     return { username, password }
   },
   handleSubmit(values, { props, resetForm, setErrors, setSubmitting }) {
-    fetch('/employee/create', {
+    const employeeAPIDomain = process.env.REACT_APP_EMPLOYEE_API_DOMAIN || 'http://54.169.120.250:8080/api/v1';
+    const endpoint = `${employeeAPIDomain}/employee/create`;
+    fetch(endpoint, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {

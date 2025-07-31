@@ -25,11 +25,12 @@ import C3Chart from "react-c3js";
 
 import SiteWrapper from "./SiteWrapper.react";
 import { ListAllEmployees, 
-  ListEmployeeActiveEmployee,
-  ListEmployeeInActiveEmployee,
-  RoleDistribution,
+  // ListEmployeeActiveEmployee,
+  // ListEmployeeInActiveEmployee,
+  // RoleDistribution,
+  // StatusDistribution,
   LocationDistribution,
-  StatusDistribution } from './EmployeeData';
+   } from './EmployeeData';
 
 function Home() {
   return (
@@ -37,8 +38,8 @@ function Home() {
       <Page.Content title="Dashboard">
         <Grid.Row cards={true}>
           <ListAllEmployees/>
-          <ListEmployeeActiveEmployee/>
-          <ListEmployeeInActiveEmployee/>
+          {/* <ListEmployeeActiveEmployee/>
+          <ListEmployeeInActiveEmployee/> */}
           <Grid.Col sm={3}>
             <StatsCard
               layout={1}
@@ -49,8 +50,8 @@ function Home() {
           </Grid.Col>
           <Grid.Col>
             <Grid.Row cards="true">
-              <RoleDistribution/>
-              <StatusDistribution/>
+              {/* <RoleDistribution/> */}
+              {/* <StatusDistribution/> */}
               <LocationDistribution/>
             </Grid.Row>
           </Grid.Col>
