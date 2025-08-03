@@ -10,7 +10,7 @@ class ListEmployee extends React.Component {
 	}
 	
 	loadData() {
-		const attendanceAPIDomain = process.env.REACT_APP_ATTENDANCE_API_DOMAIN || 'http://54.169.120.250:8081/api/v1';
+		const attendanceAPIDomain = process.env.REACT_APP_ATTENDANCE_API_DOMAIN || 'http://13.233.112.89:5000/api/v1';
 		const endpoint = `${attendanceAPIDomain}/attendance/search`;
 		fetch(endpoint)
 			.then(response => response.json())

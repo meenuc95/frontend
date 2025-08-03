@@ -15,7 +15,7 @@ function generateResult(input) {
 
 export function ListAllEmployees() {
     const [stats, handleStats] = useState([]);
-    const employeeAPIDomain = process.env.REACT_APP_EMPLOYEE_API_DOMAIN || 'http://54.169.120.250:8080/api/v1';
+    const employeeAPIDomain = process.env.REACT_APP_EMPLOYEE_API_DOMAIN || 'http://13.200.237.169:8080/api/v1';
     const FetchData = async () => {
       const endpoint = `${employeeAPIDomain}/employee/search/all`;
       const data = await fetch(endpoint);
@@ -156,7 +156,7 @@ export function LocationDistribution() {
   const [stats, handleStats] = useState([]);
 
   const FetchData = async () => {
-    const employeeAPIDomain = process.env.REACT_APP_EMPLOYEE_API_DOMAIN || 'http://54.169.120.250:8080/api/v1';
+    const employeeAPIDomain = process.env.REACT_APP_EMPLOYEE_API_DOMAIN || 'http://13.200.237.169:8080/api/v1';
     const endpoint = `${employeeAPIDomain}/employee/search/location`;
     const data = await fetch(endpoint);
     const stats = await data.json();
